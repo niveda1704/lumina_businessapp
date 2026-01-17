@@ -3,11 +3,11 @@
 **An "X-Ray" for Business Operations.**
 Lumina is a heuristic-based **Operational Intelligence Engine** designed to quantify the "invisible financial loss" in business workflows. It moves beyond standard cost tracking to measure the financial impact of operational friction—including approval delays, context switching, and rework loops.
 
-<!-- ![Lumina Dashboard](Add your dashboard screenshot here) -->
+
 
 ##  Key Features
 
-*   **Invisible Loss Quantification**: Uses heuristic algorithms to calculate the exact monetary cost of inefficiency (e.g., "This approval delay costs ₹12k/week").
+*   **Invisible Loss Quantification**: Uses heuristic algorithms to calculate the exact monetary cost of inefficiency .
 *   **Editorial-Style Reporting**: A premium, document-style analysis layout with interactive charts, "Blindspot" detection, and clarity scoring.
 *   **Scenario Simulator**: Real-time "What-If" engine that lets users tweak team size and tools to see projected savings instantly.
 *   **Executive Export**: One-click generation of audit-ready PDF and PPTX presentations using `ReportLab` and `Python-PPTX`.
