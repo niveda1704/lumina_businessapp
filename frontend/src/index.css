@@ -1,0 +1,318 @@
+:root {
+  /* Soft Editorial Pink Theme */
+  --bg-primary: #fad1e3;
+  /* Updated to User's Pink Request */
+  --bg-secondary: #ffffff;
+  --bg-card: rgba(255, 255, 255, 0.85);
+  /* Milky white glass */
+  --text-primary: #2d2626;
+  /* Deep brownish charcoal */
+  --text-secondary: #7a6e6e;
+  /* Warm gray */
+  --accent-color: #d16d6d;
+  /* Muted Rose */
+  --accent-glow: rgba(209, 109, 109, 0.2);
+  --danger: #d94242;
+  /* Soft red */
+  --warning: #eab308;
+  --success: #5c9e6f;
+  /* Muted green */
+  --border-color: rgba(0, 0, 0, 0.06);
+  --font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+  letter-spacing: -0.02em;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Utilities */
+/* Hybrid Glass & Neumorphism Design System */
+
+/* Hybrid Glass & Neumorphism Design System (Light Mode Adapter) */
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.75);
+  /* More opaque white */
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 30px;
+  /* Smooth large corners */
+  padding: 3rem;
+  box-shadow: 0 20px 60px rgba(74, 4, 46, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-panel:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px rgba(74, 4, 46, 0.1);
+}
+
+/* Primary Button - Pink/Mauve */
+.btn-primary {
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(219, 39, 119, 0.3);
+}
+
+.btn-primary:hover {
+  background: #be185d;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(219, 39, 119, 0.4);
+}
+
+/* Secondary Button - Outline */
+.btn-secondary {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--text-primary);
+  padding: 0.8rem 1.5rem;
+  border-radius: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: rgba(74, 4, 46, 0.05);
+  transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* Specific Components */
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.stat-label {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Input Fields - White Pill */
+.input-field {
+  width: 100%;
+  background: white;
+  border: 1px solid rgba(74, 4, 46, 0.1);
+  border-radius: 50px;
+  /* Pill shape */
+  padding: 1rem 1.5rem;
+  color: var(--text-primary);
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+textarea.input-field {
+  border-radius: 20px;
+  /* Rounded rect for textareas */
+}
+
+.input-field:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 4px rgba(219, 39, 119, 0.1);
+}
+
+.input-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-left: 10px;
+  /* Align with pill input */
+}
+
+.input-group {
+  margin-bottom: 2.2rem;
+}
+
+/* Custom Scrollbar - Pink Theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(74, 4, 46, 0.1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(74, 4, 46, 0.2);
+}
+
+/* Background Mesh - Subtle Pink Gradient */
+.grid-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: var(--bg-primary);
+  /* Base Pink */
+  overflow: hidden;
+}
+
+.grid-bg::before,
+.grid-bg::after,
+.mesh-overlay {
+  content: '';
+  position: absolute;
+  filter: blur(80px);
+  /* The "Gaussian Blur" softness */
+  animation: floatOrb 20s infinite ease-in-out alternate;
+  opacity: 0.6;
+}
+
+/* Warm Peach Blob */
+.grid-bg::before {
+  top: -10%;
+  left: -10%;
+  width: 50vw;
+  height: 50vw;
+  background: radial-gradient(circle, #fcd5ce 0%, transparent 70%);
+  animation-duration: 25s;
+}
+
+/* Soft Rose Blob */
+.grid-bg::after {
+  bottom: -10%;
+  right: -10%;
+  width: 60vw;
+  height: 60vw;
+  background: radial-gradient(circle, #fec5bb 0%, transparent 70%);
+  animation-duration: 30s;
+  animation-delay: -5s;
+}
+
+/* Creamy Accent Blob */
+.mesh-overlay {
+  /* Repurposing texturing div for 3rd orb */
+  top: 30%;
+  left: 30%;
+  width: 40vw;
+  height: 40vw;
+  background: radial-gradient(circle, #ffe5d9 0%, transparent 70%);
+  animation-duration: 35s;
+  animation-delay: -10s;
+  z-index: -1;
+}
+
+@keyframes floatOrb {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(30px, 50px) scale(1.1);
+  }
+
+  100% {
+    transform: translate(-20px, -30px) scale(0.95);
+  }
+}
+
+/* --- Unique Report Page Styles (Offset Neo-Cards) --- */
+
+/* Main Container Surface - Clean White Paper */
+.report-surface {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 30px;
+  padding: 2.5rem;
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.05);
+  /* Deep subtle ambient shadow */
+  backdrop-filter: blur(10px);
+  position: relative;
+  z-index: 10;
+}
+
+/* Inner Cards - The "Not Ordinary" Style */
+.report-card {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 20px;
+  padding: 2rem;
+  /* UNIQUE FEATURE: Offset Colored Shadow */
+  box-shadow: 6px 6px 0px rgba(209, 109, 109, 0.15), 0 4px 12px rgba(0, 0, 0, 0.03);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  /* Boing effect */
+  position: relative;
+  overflow: hidden;
+}
+
+.report-card:hover {
+  transform: translate(-4px, -4px);
+  /* Shadow grows and gets slightly more vivid */
+  box-shadow: 10px 10px 0px rgba(209, 109, 109, 0.25), 0 10px 30px rgba(0, 0, 0, 0.05);
+  border-color: rgba(209, 109, 109, 0.3);
+}
+
+/* Compact variant for lists/stats */
+.report-card.compact {
+  padding: 1.5rem;
+}
