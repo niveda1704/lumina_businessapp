@@ -27,7 +27,7 @@ Lumina is a heuristic-based **Operational Intelligence Engine** designed to quan
 *   **Python-PPTX & ReportLab**: Server-side generation of downloadable assets.
 *   **JWT Authentication**: Secure user sessions and role management.
 
-##  Getting Started
+
 
 ### Prerequisites
 *   Node.js (v18+)
